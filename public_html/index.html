@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Your Bike</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Material icons for floating buttons  -->
+        <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">    
+        <!-- Link for the roboto family of fonts -->
+        <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,500,400italic,700,700italic' rel='stylesheet' type='text/css'>
+        <!-- Link for the stylesheet of MDL, for the materials for the radio button -->
+        <link rel="stylesheet" href="//storage.googleapis.com/code.getmdl.io/1.0.1/material.teal-blue.min.css" />
+        <!-- Link for the latest compiled and minified Bootstrap stylesheet  -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+        <!-- Script for the MDL api -->
+        <script src="//storage.googleapis.com/code.getmdl.io/1.0.1/material.min.js"></script>
+        <!-- Script for the jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <!-- Script for the latest compiled JavaScript (Bootstrap) -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                //Initialize all elements with data-toggle="tooltips" in the document
+                //$('[data-toggle="tooltip"]').tooltip();
+                $("body").tooltip({
+                    selector: '[data-toggle="tooltip"]',
+                    container: 'body'
+                });
+            });
+        </script>
+        <style>
+            .tooltip > .tooltip-inner {
+                max-width: 300px;
+                background-color: #FFF; 
+                color: #000;
+                padding-top: 5px;
+                padding-bottom: 15px;
+                padding-left: 25px;
+                padding-right: 25px;
+                font-size: 15px;
+            }
+
+            .img_container {
+                position:relative;
+                width: 100%;
+            }
+
+            .img-overlay {
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                text-align: center;
+            }
+
+            .img-overlay:before {
+                content: ' ';
+                display: block;
+                /* adjust 'height' to position overlay content vertically */
+                height: 50%;
+            }
+
+            .img_container #butt1, #butt2, #butt3, #butt4 {
+                position:absolute;
+            }
+
+            .img_container #butt1 {
+                left:10%;
+                top:45%;
+            }
+
+            .img_container #butt2 {
+                left:38%;
+                top:32%;
+            }
+
+            .img_container #butt3 {
+                left:52%;
+                top:6%;
+            }
+
+            .img_container #butt4 {
+                left:70%;
+                top:60%;
+            }
+
+            @media screen and (max-width: 768px) {
+                .img_container #butt1 {
+                    left:7%;
+                    top:45%;
+                }
+
+                .img_container #butt2 {
+                    left:38%;
+                    top:32%;
+                }
+
+                .img_container #butt3 {
+                    left:52%;
+                    top:6%;
+                }
+
+                .img_container #butt4 {
+                    left:70%;
+                    top:60%;
+                }
+            }
+
+            @media screen and (max-width: 480px) {
+                .img_container #butt1 {
+                    left:4%;
+                    top:45%;
+                }
+
+                .img_container #butt2 {
+                    left:38%;
+                    top:26%;
+                }
+
+                .img_container #butt3 {
+                    left:50%;
+                    top:3%;
+                }
+
+                .img_container #butt4 {
+                    left:65%;
+                    top:53%;
+                }
+            }
+
+            @media screen and (max-width: 320px) {
+
+            }
+
+            @media screen and (min-width: 320px) {
+                .tooltip > .tooltip-inner {
+                    max-width: 180px;
+                    padding-top: 5px;
+                    padding-bottom: 15px;
+                    padding-left: 25px;
+                    padding-right: 25px;
+                    font-size: 15px;
+                }
+            }
+        </style>
+    </head>
+    <body style="background-color:#7FFF00;">
+        <div class="container-fluid">        
+            <div class="row">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-8">
+                    <h1 align="center">YOUR BIKE</h1>
+                </div>
+                <div class="col-sm-2"></div>
+            </div>
+            <br/>
+            <div class="row">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-8">
+                    <p>Hello. You are now on the page that will teach you about different parts of your bike. Hover your mouse over the floating buttons to find out more about each part. We cover everything from wheels to the frame to the handlebars.</p>
+                </div>
+                <div class="col-sm-2"></div>
+            </div>
+            <br/>
+            <div class="row">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-8">
+                    <div class="img_container"> 
+                        <img class="img-responsive" src="images/bike.jpg" alt="Bike" style="width:100%">
+                        <div id="img-overlay" class="img-overlay">
+                            <button id="butt1" class="mdl-button mdl-button--fab mdl-button--mini-fab mdl-button--colored" data-html="true" data-toggle="tooltip" data-placement="bottom" 
+                                    title="<h5 style='color:blue; font-size:20px;'>Bike Tyres</h5></strong>
+                                    <div style='text-align:left;'>The tyres on a bike are interchangeable, as they can get punctured</div>"
+                                    >
+                                <i class="material-icons" style="font-size:15px;">add</i>
+                            </button>
+                            <button id="butt2" class="mdl-button mdl-button--fab mdl-button--mini-fab mdl-button--colored" data-html="true" data-toggle="tooltip" data-placement="bottom" 
+                                    title="<h5 style='color:blue; font-size:20px;'>Ultra Durable Frame</h5></strong>
+                                    <div style='text-align:left;'>Salient grade carbon w/ frame protection can take whatever you can throw at it</div>">
+                                <i class="material-icons" style="font-size:15px;">add</i>
+                            </button>
+                            <button id="butt3" class="mdl-button mdl-button--fab mdl-button--mini-fab mdl-button--colored" data-html="true" data-toggle="tooltip" data-placement="bottom" 
+                                    title="<h5 style='color:blue; font-size:20px;'>Handlebars</h5></strong>
+                                    <div style='text-align:left;'>The handlebars of the bike ensure responsive turning. Brakes help the user to slow down</div>">
+                                <i class="material-icons" style="font-size:15px;">add</i>
+                            </button>
+                            <button id="butt4" class="mdl-button mdl-button--fab mdl-button--mini-fab mdl-button--colored" data-html="true" data-toggle="tooltip" data-placement="bottom" 
+                                    title="<h5 style='color:blue; font-size:20px;'>Spokes</h5></strong>
+                                    <div style='text-align:left;'>The spokes on both wheels of the bike are durable enough to hold, while providing a smooth ride</div>">
+                                <i class="material-icons" style="font-size:15px;">add</i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-2"></div>
+            </div> 
+        </div>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+    </body>
+</html>
